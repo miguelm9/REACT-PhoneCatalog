@@ -4,7 +4,7 @@ import "./Phone.css";
 
 function Phone(props) {
   return (
-    <div className="phone">
+    <div className="contact">
       <span>{props.name}</span>
     </div>
   );

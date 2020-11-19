@@ -1,16 +1,15 @@
 .contact {
-	margin: 15px;
-	margin-left: 30%;
-	margin-right: 30%;
-	padding: 70px;
-	border: 1px solid #bbb;
-	background-color: #eee;
-	text-align: right;
-  }
-  
-  .contact span {
-	font-size: 1.2em;
-	text-decoration: none;
-	color: #333;
-  }
-  
+  margin: 15px;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 70px;
+  border: 1px solid #bbb;
+  background-color: #eee;
+  text-align: right;
+}
+
+.contact span {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #333;
+}

@@ -5,13 +5,13 @@ import PropTypes from "prop-types";
 import Phone from "./Phone";
 
 function PhoneList(props) {
-	return (
-		<div>{props.phones.map(c => <Phone key={c.id} name={c.name} />)}</div>
-	);
+  return (
+    <div>{props.contacts.map(c => <Phone key={c.id} name={c.name} />)}</div>
+  );
 }
 
 PhoneList.propTypes = {
-	contacts: PropTypes.array.isRequired
+  contacts: PropTypes.array.isRequired
 };
 
 export default PhoneList;
