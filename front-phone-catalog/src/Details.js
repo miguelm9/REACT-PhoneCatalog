@@ -1,23 +1,20 @@
-import React from 'react';
+import React, { Component } from "react";
+import logo from './components/gs-logo.png';
+import "./App.css";
+import {Link} from 'react-router-dom';
 
+class Details extends Component {
 
-const Details = () => {
-
+  render() {
     return (
-        <div>
-            <header className="Home-header">
-                <div>
-                    <h1>FreeZ eXchange</h1>
-                    <h2>Crystal Market</h2>
-                    <h3>Freedom</h3>
-                    <h4>Agorism</h4>
-                    <h5>Crypto-Anarchist</h5>
-                    <h6>Cypherpunk</h6>
-                    <h7>Barter</h7>
-                </div>
-            </header>
-        </div>
+      <div className="App">
+        <header className="App-header">
+		  <Link to={"/"}><img src={logo} className="App-logo" alt="logo"/></Link>
+          <h1 className="App-title">Phone Details: </h1>
+        </header>
+      </div>
     );
+  }
 }
 
 export default Details;
