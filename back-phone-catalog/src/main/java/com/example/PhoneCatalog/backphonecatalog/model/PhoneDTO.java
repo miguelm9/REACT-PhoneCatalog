@@ -1,7 +1,6 @@
 package com.example.PhoneCatalog.backphonecatalog.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,4 +10,12 @@ import lombok.NoArgsConstructor;
 public class PhoneDTO {
     private int id;
     private String name;
+    private String manufacturer;
+    private String description;
+    private String color;
+    private double price;
+    private String imageFileName;
+    private String screen;
+    private String processor;
+    private int ram;
 }

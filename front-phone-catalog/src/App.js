@@ -13,14 +13,18 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
+      //.get("https://jsonplaceholder.typicode.com/users")
+      .get("http://localhost:8080/phones")
       .then(response => {
         // create an array of phones only with relevant data
         const newContacts = response.data.map(c => {
+        console.log(c.imageFileName);
           return {
             id: c.id,
-            name: c.name
+            name: c.name,
+            image: c.imageFileName,
           };
+
         });
 
         // create a new "state" object without mutating

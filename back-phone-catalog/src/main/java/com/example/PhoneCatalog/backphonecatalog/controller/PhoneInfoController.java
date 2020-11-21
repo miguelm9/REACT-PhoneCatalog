@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import utils.PhoneListCreator;
 
 import java.util.HashMap;
 import java.util.List;
@@ -29,13 +30,7 @@ public class PhoneInfoController {
     }
 
     @GetMapping("/phones")
-    public ResponseEntity<List<PhoneDTO>> hello() {
-        PhoneDTO phoneDTO = new PhoneDTO(0, "Miguel");
-        PhoneDTO phoneDTO1 = new PhoneDTO(1, "Miguel1");
-        PhoneDTO phoneDTO2 = new PhoneDTO(2, "Miguel1");
-        List<PhoneDTO> phoneList = List.of(phoneDTO, phoneDTO1, phoneDTO2);
-        JSONObject jsonModel = new JSONObject();
-        jsonModel.put("name","mickey");
-        return ResponseEntity.status(HttpStatus.OK).body(phoneList);
+    public ResponseEntity<List<PhoneDTO>> listPhones () {
+        return ResponseEntity.status(HttpStatus.OK).body(new PhoneListCreator().fillListWithPhones());
     }
 }

@@ -1,11 +1,29 @@
-.contact {
+.phone {
+  font-size: larger;
   margin: 15px;
   margin-left: 30%;
   margin-right: 30%;
   padding: 70px;
   border: 1px solid #bbb;
   background-color: #eee;
-  text-align: right;
+  text-align: left;
+}
+
+.link {
+  color: black;
+  text-decoration: unset;
+}
+
+.buttonDiv {
+  margin-left: 370px;
+  margin-top: -15px;
+  margin-bottom: 50px;
+}
+
+.button {
+  font-size: larger;
+  margin-left: 50%;
+  background-color: rgb(14, 183, 150)
 }
 
 .contact span {
