@@ -4,15 +4,12 @@ import com.example.PhoneCatalog.backphonecatalog.model.PhoneDTO;
 import com.example.PhoneCatalog.backphonecatalog.service.PhoneDetailService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
-import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import utils.PhoneListCreator;
+import com.example.PhoneCatalog.backphonecatalog.utils.PhoneListCreator;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @AllArgsConstructor

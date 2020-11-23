@@ -1,17 +1,25 @@
 .phone {
-  font-size: larger;
+  font-size: 26px;
   margin: 15px;
   margin-left: 30%;
   margin-right: 30%;
   padding: 70px;
   border: 1px solid #bbb;
   background-color: #eee;
-  text-align: left;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .link {
   color: black;
   text-decoration: unset;
+}
+
+.image {
+  margin-top: 10%;
+  margin-bottom:-10%;
+  max-width:100%;
+  max-height:100%
 }
 
 .buttonDiv {
@@ -26,8 +34,3 @@
   background-color: rgb(14, 183, 150)
 }
 
-.contact span {
-  font-size: 1.2em;
-  text-decoration: none;
-  color: #333;
-}

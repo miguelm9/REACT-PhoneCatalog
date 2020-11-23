@@ -13,7 +13,7 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      //.get("https://jsonplaceholder.typicode.com/users")
+      //.get("httyps://jsonplaceholder.typicode.com/users")
       .get("http://localhost:8080/phones")
       .then(response => {
         // create an array of phones only with relevant data

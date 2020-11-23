@@ -35,7 +35,8 @@ class PhoneInfoControllerTest {
     @Test
     public void givenPhoneDTO_whenIDvalid_thenReturn200OK () throws Exception {
         //Given
-        PhoneDTO phoneDTO = new PhoneDTO(0, "Miguel");
+        PhoneDTO phoneDTO = new PhoneDTO(0, "iPhone7", "manufactorar", "description", "color", 200.50, "file.png", "screen", "processor", 3);
+
         when(phoneDetailService.isDetailingSuccessful(phoneDTO)).thenReturn(true);
 
         //When
@@ -50,7 +51,7 @@ class PhoneInfoControllerTest {
     @Test
     public void givenPhoneDTO_whenIDinvalid_thenReturn401K () throws Exception {
         //Given
-        PhoneDTO phoneDTO = new PhoneDTO(1, "Miguel");
+        PhoneDTO phoneDTO = new PhoneDTO(0, "iPhone7", "manufactorar", "description", "color", 200.50, "file.png", "screen", "processor", 3);
         //When
         mvc.perform(MockMvcRequestBuilders.post("/test")
                 .contentType(APPLICATION_JSON)

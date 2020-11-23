@@ -17,7 +17,7 @@ class PhoneDetailServiceTest {
     @Test
     public void givenPhoneDTO_whenIDinvalid_returnFalse () {
         //Given
-        PhoneDTO phoneDTO = new PhoneDTO(2, "Miguel");
+        PhoneDTO phoneDTO = new PhoneDTO(0, "iPhone7", "manufactorar", "description", "color", 200.50, "file.png", "screen", "processor", 3);
         //When
         boolean actualResponse = phoneDetailService.isDetailingSuccessful(phoneDTO);
         //Then
