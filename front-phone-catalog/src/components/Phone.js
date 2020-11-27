@@ -2,8 +2,8 @@ import React from "react";
 import "./Phone.css";
 import {Link} from 'react-router-dom';
 import {connect} from "react-redux";
+import updateWord from "../store/phone/action"
 
-var idStore = "";
 
 const Phone = (props) => {
 
@@ -15,8 +15,8 @@ const Phone = (props) => {
       </div>
       
       <div className="buttonDiv">
-        <button className="button">
-          <Link onClick={() => idStore = props.id} className="link" to={"/details"}>View more</Link>
+        <button onClick={ () => {updateWord(props.id);}} className="button">
+          <Link className="link" to={"/details"}>View more</Link>
         </button>
       </div>
 
@@ -24,4 +24,5 @@ const Phone = (props) => {
   );
 }
 
-export default connect(null, {idStore})(Phone);
+
+export default connect(null, {updateWord})(Phone);

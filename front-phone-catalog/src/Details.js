@@ -3,6 +3,7 @@ import logo from './components/gs-logo.png';
 import "./App.css";
 import axios from "axios";
 import {Link} from 'react-router-dom';
+import LeID from './components/id';
 
 class Details extends Component {
 
@@ -13,7 +14,7 @@ class Details extends Component {
   componentDidMount() {
     axios
       //.get("httyps://jsonplaceholder.typicode.com/users")
-      .get("http://localhost:8080/details")
+      .get("http://localhost:8080/")
       .then(response => {
         // create an array of phones only with relevant data
         const newContacts = response.data.map(c => {
@@ -41,8 +42,9 @@ class Details extends Component {
     return (
       <div className="App">
         <header className="App-header">
-		  <Link to={"/"}><img src={logo} className="App-logo" alt="logo"/></Link>
-          <h1 className="App-title">Phone Details</h1>
+		    <Link to={"/"}><img src={logo} className="App-logo" alt="logo"/></Link>
+        <h1 className="App-title">Phone Details</h1>
+        <LeID/>
         </header>
       </div>
     );
