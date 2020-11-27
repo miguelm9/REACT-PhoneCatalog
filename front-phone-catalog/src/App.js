@@ -18,13 +18,11 @@ class App extends Component {
       .then(response => {
         // create an array of phones only with relevant data
         const newContacts = response.data.map(c => {
-        console.log(c.imageFileName);
           return {
             id: c.id,
             name: c.name,
             image: c.imageFileName,
           };
-
         });
 
         // create a new "state" object without mutating

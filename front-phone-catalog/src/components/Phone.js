@@ -1,22 +1,22 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Phone.css";
 import {Link} from 'react-router-dom';
+import {connect} from "react-redux";
 
+var idStore = "";
 
-function Phone(props) {
-  console.log(props.image1);
-  
+const Phone = (props) => {
+
   return (
     <div>
       <div className="phone" >
-        <span>{props.name}</span> 
+        <span>{props.name}</span>
         <img src={props.image} className="image" alt=""></img>
       </div>
       
       <div className="buttonDiv">
         <button className="button">
-          <Link className="link" to={"/details"}>View more</Link>
+          <Link onClick={() => idStore = props.id} className="link" to={"/details"}>View more</Link>
         </button>
       </div>
 
@@ -24,8 +24,4 @@ function Phone(props) {
   );
 }
 
-Phone.propTypes = {
-  name: PropTypes.string.isRequired
-};
-
-export default Phone;
+export default connect(null, {idStore})(Phone);

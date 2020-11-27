@@ -6,7 +6,7 @@ import Phone from "./Phone";
 
 function PhoneList(props) {
   return (
-    <div>{props.contacts.map(c => <Phone key={c.id} name={c.name} image={c.image}/>)}</div>
+    <div>{props.contacts.map(c => <Phone id={c.id} name={c.name} image={c.image}/>)}</div>
   );
 }
 
