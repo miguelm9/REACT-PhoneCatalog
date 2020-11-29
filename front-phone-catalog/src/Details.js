@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import { selectActiveID } from './store/phone/reducer';
 import {updateWord} from "./store/phone/action"
 import {connect} from 'react-redux';
+import LeID from './components/id'
 
 // class Details extends Component {
 
@@ -58,6 +59,7 @@ const Details = ({ id }) => (
 		    <Link to={"/"}><img src={logo} className="App-logo" alt="logo"/></Link>
         <h1 className="App-title">Phone Details</h1>
         <text>ID: {id}</text>
+        <LeID id={id}/>
         </header>
   </div>
 );

@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import logo from './components/gs-logo.png';
 import "./App.css";
-
 import axios from "axios";
-
 import PhoneList from "./components/PhoneList";
 
 class App extends Component {
