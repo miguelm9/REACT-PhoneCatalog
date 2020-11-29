@@ -1,4 +1,4 @@
-const initialState = { id: -1234 };
+const initialState = { id: -10 };
 
 export default (state = initialState, action) => {
     if (action.type === 'UPDATE_ID') {

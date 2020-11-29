@@ -1,5 +1,4 @@
-const updateWord = (id) => {
-    alert("They changed it to "+ id);
+export const updateWord = (id) => {
     return {
         type: 'UPDATE_ID',
         payload: id

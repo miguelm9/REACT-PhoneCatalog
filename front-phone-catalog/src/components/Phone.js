@@ -2,7 +2,7 @@ import React from "react";
 import "./Phone.css";
 import {Link} from 'react-router-dom';
 import {connect} from "react-redux";
-import updateWord from "../store/phone/action"
+import {updateWord} from "../store/phone/action"
 
 
 const Phone = (props) => {
@@ -15,11 +15,10 @@ const Phone = (props) => {
       </div>
       
       <div className="buttonDiv">
-        <button onClick={ () => {updateWord(props.id);}} className="button">
+        <button onClick={ () => {props.updateWord(props.id);}} className="button">
           <Link className="link" to={"/details"}>View more</Link>
         </button>
       </div>
-
     </div>
   );
 }
