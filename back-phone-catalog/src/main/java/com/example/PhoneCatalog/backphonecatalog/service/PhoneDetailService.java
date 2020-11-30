@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PhoneDetailService {
-    public PhoneDTO isDetailingSuccessful (IdDTO idDTO) {
+    public List<PhoneDTO> isDetailingSuccessful (IdDTO idDTO) {
         PhoneListCreator phoneListCreator = new PhoneListCreator();
         List<PhoneDTO> phoneDTOList = phoneListCreator.createListWithPhones();
         if (idDTO.getId() < 0 || idDTO.getId() > phoneDTOList.size())
             return null;
-        return phoneDTOList.get(idDTO.getId());
+        return List.of(phoneDTOList.get(idDTO.getId()));
     }
 }

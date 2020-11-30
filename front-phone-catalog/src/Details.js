@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import { selectActiveID } from './store/phone/reducer';
 import {updateWord} from "./store/phone/action"
 import {connect} from 'react-redux';
-import LeID from './components/id'
+import PrintDetails from './components/id'
 
 const Details = ({ id }) => (
   <div className="App">
@@ -14,7 +14,7 @@ const Details = ({ id }) => (
         <h1 className="App-title">Phone Details</h1>
         <text>ID: {id}</text>
         </header>
-        <LeID id={id}/>
+        <PrintDetails id={id}/>
   </div>
 );
 

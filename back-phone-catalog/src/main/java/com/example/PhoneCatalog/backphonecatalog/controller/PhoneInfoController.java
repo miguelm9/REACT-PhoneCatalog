@@ -25,7 +25,7 @@ public class PhoneInfoController {
     }
 
     @PostMapping("/details")
-    public ResponseEntity<PhoneDTO> getDetails (@RequestBody IdDTO idDTO) {
+    public ResponseEntity<List<PhoneDTO>> getDetails (@RequestBody IdDTO idDTO) {
         return (phoneDetailService.isDetailingSuccessful(idDTO) == null)
                 ? ResponseEntity.status(401).body(null)
                 : ResponseEntity.ok(phoneDetailService.isDetailingSuccessful(idDTO));

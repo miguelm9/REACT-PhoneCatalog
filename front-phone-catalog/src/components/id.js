@@ -1,32 +1,40 @@
-import React from "react";
+import React, { Component } from "react";
 import axios from "axios";
+import "../App.css";
+import DetailsList from "./DetailsList";
 
-function PrintDetails (props) {
-  axios
-      .get("http://localhost:8080/details", )
-      .then(response => {
-        // create an array of phones only with relevant data
-        const newContacts = response.data.map(c => {
-          return {
-            id: c.id,
-            name: c.name,
-            image: c.imageFileName,
-          };
-        });
+class PrintDetails extends Component {
+  state = {
+    details: []
+  };
+  componentDidMount() {
+    axios
+    .post('http://localhost:8080/details', {
+      id: this.props.id,
+    })
+    .then(response => {
+      const newDetails = response.data.map(c => {
+        return {
+          id: c.id,
+          name: c.name,
+          image: c.imageFileName,
+        };
+      });
+      const newState = Object.assign({}, this.state, {
+        details: newDetails
+      });
 
-        // create a new "state" object without mutating
-        // the original state object.
-        const newState = Object.assign({}, this.state, {
-          contacts: newContacts
-        });
-
-        // store the new state object in the component's state
-        this.setState(newState);
-      })
-      .catch(error => console.log(error));
-  return (
-    <div>ID FROM YES: {props.id}</div>
-  );
+      this.setState(newState);
+    })
+    .catch(error => console.log(error));
+  }
+  render() {
+    return (
+      <div className="App">
+        <DetailsList details={this.state.details} />
+      </div>
+    );
+  }
 }
 
 

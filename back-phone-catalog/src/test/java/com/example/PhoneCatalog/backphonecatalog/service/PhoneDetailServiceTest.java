@@ -25,7 +25,7 @@ class PhoneDetailServiceTest {
         List<PhoneDTO> phoneDTOList = phoneListCreator.createListWithPhones();
         IdDTO idDTO = new IdDTO(1);
         //When
-        PhoneDTO actualResponse = phoneDetailService.isDetailingSuccessful(idDTO);
+        List<PhoneDTO> actualResponse = phoneDetailService.isDetailingSuccessful(idDTO);
         //Then
         System.out.println("This is the new shit: "+ actualResponse);
         System.out.println("This is the old shit: "+ phoneDTOList.get(idDTO.getId()));

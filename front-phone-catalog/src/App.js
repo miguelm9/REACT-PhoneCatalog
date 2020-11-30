@@ -6,29 +6,24 @@ import PhoneList from "./components/PhoneList";
 
 class App extends Component {
   state = {
-    contacts: []
+    phones: []
   };
 
   componentDidMount() {
     axios
       .get("http://localhost:8080/phones")
       .then(response => {
-        // create an array of phones only with relevant data
-        const newContacts = response.data.map(c => {
+        const newPhones = response.data.map(c => {
           return {
             id: c.id,
             name: c.name,
             image: c.imageFileName,
           };
         });
-
-        // create a new "state" object without mutating
-        // the original state object.
         const newState = Object.assign({}, this.state, {
-          contacts: newContacts
+          phones: newPhones
         });
 
-        // store the new state object in the component's state
         this.setState(newState);
       })
       .catch(error => console.log(error));
@@ -42,7 +37,7 @@ class App extends Component {
           <h1 className="App-title">Phone Catalog</h1>
         </header>
 
-        <PhoneList contacts={this.state.contacts} />
+        <PhoneList phones={this.state.phones} />
       </div>
     );
   }
