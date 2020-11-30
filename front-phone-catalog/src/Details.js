@@ -59,8 +59,8 @@ const Details = ({ id }) => (
 		    <Link to={"/"}><img src={logo} className="App-logo" alt="logo"/></Link>
         <h1 className="App-title">Phone Details</h1>
         <text>ID: {id}</text>
-        <LeID id={id}/>
         </header>
+        <LeID id={id}/>
   </div>
 );
 

@@ -6,7 +6,7 @@ import java.util.List;
 
 public class PhoneListCreator {
 
-    public List<PhoneDTO> fillListWithPhones () {
+    public List<PhoneDTO> createListWithPhones() {
         PhoneDTO phoneDTO = new PhoneDTO(0, "iPhone 7", "Apple", "Apple iPhone 7 smartphone. Announced Sep 2016", "red", 229.99,
                 "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.directoffice.co.ke%2Fwp-content%2Fuploads%2Fiphone7plus-.png&f=1&nofb=1",
                 "4.7 Inch", "Apple A10 Fusion APL1W24", 2);
@@ -27,6 +27,6 @@ public class PhoneListCreator {
                 "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmanjaro.org%2Fimg%2Fhardware%2Fpinephone.png&f=1&nofb=1",
                 "5.95 Inch", "Cortex A-53", 2);
 
-        return List.of(phoneDTO, phoneDTO1, phoneDTO2,phoneDTO4, phoneDTO3);
+        return List.of(phoneDTO, phoneDTO1, phoneDTO2, phoneDTO3, phoneDTO4);
     }
 }

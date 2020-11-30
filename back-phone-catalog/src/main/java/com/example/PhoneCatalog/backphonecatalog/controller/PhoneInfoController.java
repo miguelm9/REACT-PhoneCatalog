@@ -1,5 +1,6 @@
 package com.example.PhoneCatalog.backphonecatalog.controller;
 
+import com.example.PhoneCatalog.backphonecatalog.model.IdDTO;
 import com.example.PhoneCatalog.backphonecatalog.model.PhoneDTO;
 import com.example.PhoneCatalog.backphonecatalog.service.PhoneDetailService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -17,17 +18,16 @@ import java.util.List;
 public class PhoneInfoController {
 
     PhoneDetailService phoneDetailService;
-    ObjectMapper objectMapper;
-
-    @PostMapping("/test")
-    public ResponseEntity<String> getPhonesInfo (@RequestBody PhoneDTO phoneDTO) {
-        return phoneDetailService.isDetailingSuccessful(phoneDTO) ?
-                ResponseEntity.status(200).build()
-                : ResponseEntity.status(401).body("Hello");
-    }
 
     @GetMapping("/phones")
     public ResponseEntity<List<PhoneDTO>> listPhones () {
-        return ResponseEntity.status(HttpStatus.OK).body(new PhoneListCreator().fillListWithPhones());
+        return ResponseEntity.status(HttpStatus.OK).body(new PhoneListCreator().createListWithPhones());
+    }
+
+    @PostMapping("/details")
+    public ResponseEntity<PhoneDTO> getDetails (@RequestBody IdDTO idDTO) {
+        return (phoneDetailService.isDetailingSuccessful(idDTO) == null)
+                ? ResponseEntity.status(401).body(null)
+                : ResponseEntity.ok(phoneDetailService.isDetailingSuccessful(idDTO));
     }
 }
