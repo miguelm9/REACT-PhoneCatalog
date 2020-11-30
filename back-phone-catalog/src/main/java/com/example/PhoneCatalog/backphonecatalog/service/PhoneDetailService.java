@@ -11,8 +11,6 @@ public class PhoneDetailService {
     public PhoneDTO isDetailingSuccessful (IdDTO idDTO) {
         PhoneListCreator phoneListCreator = new PhoneListCreator();
         List<PhoneDTO> phoneDTOList = phoneListCreator.createListWithPhones();
-        System.out.println("List size: " + phoneDTOList.size());
-        System.out.println("ID that was passed" + idDTO.getId());
         if (idDTO.getId() < 0 || idDTO.getId() > phoneDTOList.size())
             return null;
         return phoneDTOList.get(idDTO.getId());
