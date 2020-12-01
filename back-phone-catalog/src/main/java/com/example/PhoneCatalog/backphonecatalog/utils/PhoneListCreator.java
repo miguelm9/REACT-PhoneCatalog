@@ -19,7 +19,7 @@ public class PhoneListCreator {
                 "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc1-ebgames.eb-cdn.com.au%2Fmerchandising%2Fimages%2Fpackshots%2F8fad5a1bc52e44db9f93be93d29815da_Large.png&f=1&nofb=1",
                 "5.1 Inch", "Qualcomm MSM8974AC Snapdragon 801", 2);
 
-        PhoneDTO phoneDTO3 = new PhoneDTO(3, "Xiaomi Redmi 9", "Xiaomi", "", "tropical green", 154.35,
+        PhoneDTO phoneDTO3 = new PhoneDTO(3, "Xiaomi Redmi 9", "Xiaomi", "Xiaomi Redmi 9 Android smartphone. Announced Jun 2020.", "tropical green", 154.35,
                 "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftechnospain.es%2F541676-thickbox_default%2Fxiaomi-redmi-9-32gb-verde.jpg&f=1&nofb=1",
                 "6.53 Inch", "MediaTek Helio G80", 4);
 

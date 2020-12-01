@@ -18,6 +18,13 @@ class PrintDetails extends Component {
           id: c.id,
           name: c.name,
           image: c.imageFileName,
+          manufacturer: c.manufacturer,
+          description: c.description,
+          color: c.color,
+          price: c.price,
+          screen: c.screen,
+          processor: c.processor,
+          ram: c.ram,
         };
       });
       const newState = Object.assign({}, this.state, {
