@@ -10,9 +10,21 @@ First, after cloning this repository in your local PC, enter the back project di
 
 Now, having `gradle.build` available in this directory.
 For this we first need to [install Gradle](https://gradle.org/install/)
-We can run the application:
+<br />We can now run the application:
 ### `gradle bootRun`
 
+Something like this should show, which would mean we are ready to go:
+Task :bootRun
+
+<br />  .   ____          _            __ _ _
+<br /> /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+<br />( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+<br /> \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+<br />  '  |____| .__|_| |_|_| |_\__, | / / / /
+<br /> =========|_|==============|___/=/_/_/_/
+<br /> :: Spring Boot ::        (v1.5.9.RELEASE)
+<br />
+<br />2019-06-30 09:57:38.494  INFO 11636 --- [           main] c.j.SpringBootApplication                : Starting SpringBootApplication <br />on DESKTOP-6QDF17L with
 
 ## Build and Run the client side
 
