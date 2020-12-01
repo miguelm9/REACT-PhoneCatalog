@@ -1,7 +1,7 @@
 # Phone Catalog Project
 
 This project consists of two main parts: the API server side, developed in Java with Spring Boot and the client side develeped in JavaScript with React.
-First, we will see how to build both of these parts and the dependencies and packages that need to be installed for it to properly work on any machine. 
+<br />First, we will see how to build both of these parts and the dependencies and packages that need to be installed for it to properly work on any machine. 
 
 ## Build and Run the server side. 
 
