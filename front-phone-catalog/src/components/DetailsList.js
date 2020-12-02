@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function DetailsList(props) {
   return (
     <div className="detail">
-      <h1>{props.details.map(c => c.name)} Details</h1>
+      <h1 className="phoneTitle">{props.details.map(c => c.name)} Details</h1>
       <img src={props.details.map(c => c.image)} className="imageDetails" alt=""></img>
       <h1>Manufacturer: {props.details.map(c => c.manufacturer)}</h1>
       <h1>Description: {props.details.map(c => c.description)}</h1>

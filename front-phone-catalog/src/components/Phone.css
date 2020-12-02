@@ -22,6 +22,10 @@
   font-family: 'Times New Roman', Times, serif;
 }
 
+.phoneTitle {
+  text-align: center;
+}
+
 .link {
   color: black;
   text-decoration: unset;
@@ -37,8 +41,12 @@
 .imageDetails {
   margin-top: 0%;
   margin-bottom:0%;
-  max-width:100%;
-  max-height:100%
+  max-width:70%;
+  max-height:70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .buttonDiv {
