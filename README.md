@@ -58,10 +58,10 @@ The project structure is divided into: `controller`, `model`, `service` and `uti
 * `controller`: In this package we, we have the file `PhoneInfoController.java` which is the one that created the two endpoints I have used: `/phones` and `/details`. Being the former the GET method and, the later, the POST method.\
 The first endpoint has very simple logic, since it always returns the same JSON. The `/details` controller calls a service which we will see now.\
 
-*`model`: This package contains `PhoneDTO.java` and `IdDTO.java`. The first one is used to define each of the phones with their attributes and the second one for storing the ID passed on the POST method.\
+* `model`: This package contains `PhoneDTO.java` and `IdDTO.java`. The first one is used to define each of the phones with their attributes and the second one for storing the ID passed on the POST method.\
 
-*`service`: Here we have `PhoneDetailService.java` which handles the POST request that enters through `/details`. It returns the element number ID from the PhoneDTO list.\
+* `service`: Here we have `PhoneDetailService.java` which handles the POST request that enters through `/details`. It returns the element number ID from the PhoneDTO list.\
 
-*`utils`: In the utils package I have put `PhoneListCreator.java` which the only thing it does is create a list full of PhonesDTO. 
+* `utils`: In the utils package I have put `PhoneListCreator.java` which the only thing it does is create a list full of PhonesDTO. 
 
 There is, as well, a mirror project structure in which I have the tests for the `controller` and the `service` 
