@@ -63,3 +63,5 @@ The first endpoint has very simple logic, since it always returns the same JSON.
 *`service`: Here we have `PhoneDetailService.java` which handles the POST request that enters through `/details`. It returns the element number ID from the PhoneDTO list.\
 
 *`utils`: In the utils package I have put `PhoneListCreator.java` which the only thing it does is create a list full of PhonesDTO. 
+
+There is, as well, a mirror project structure in which I have the tests for the `controller` and the `service` 
