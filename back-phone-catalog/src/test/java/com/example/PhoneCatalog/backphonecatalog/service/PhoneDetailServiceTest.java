@@ -9,8 +9,7 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @ExtendWith(MockitoExtension.class)
@@ -27,8 +26,6 @@ class PhoneDetailServiceTest {
         //When
         List<PhoneDTO> actualResponse = phoneDetailService.isDetailingSuccessful(idDTO);
         //Then
-        System.out.println("This is the new shit: "+ actualResponse);
-        System.out.println("This is the old shit: "+ phoneDTOList.get(idDTO.getId()));
-        assertSame(actualResponse, phoneDTOList.get(idDTO.getId()));
+        assertEquals(List.of(phoneDTOList.get(idDTO.getId())), actualResponse);
     }
 }

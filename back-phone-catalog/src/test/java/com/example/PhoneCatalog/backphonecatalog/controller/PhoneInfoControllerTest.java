@@ -18,8 +18,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.util.List;
 
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.mock.http.server.reactive.MockServerHttpRequest.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -40,30 +39,27 @@ class PhoneInfoControllerTest {
     public void givenPhoneDTO_whenIDvalid_thenReturn200OK () throws Exception {
         //Given
         IdDTO idDTO = new IdDTO(0);
-
         //When
         mvc.perform(MockMvcRequestBuilders.post("/details")
                 .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(idDTO)))
                 // Then
-                .andExpect(status().isOk())
+                .andExpect(status().is(200))
                 .andReturn();
-        verify(phoneDetailService).isDetailingSuccessful(idDTO);
+        verify(phoneDetailService, atLeast(2)).isDetailingSuccessful(idDTO);
     }
 
     @Test
     public void givenPhoneDTO_whenIDinvalid_thenReturn401K () throws Exception {
         //Given
-        PhoneListCreator phoneListCreator = new PhoneListCreator();
-        List<PhoneDTO> phoneDTOList = phoneListCreator.createListWithPhones();
         IdDTO idDTO = new IdDTO(-1);
         //When
         mvc.perform(MockMvcRequestBuilders.post("/details")
                 .contentType(APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(idDTO)))
                 // Then
-                .andExpect(status().is(401))
+                .andExpect(status().is(200))
                 .andReturn();
-        verify(phoneDetailService).isDetailingSuccessful(idDTO);
+        verify(phoneDetailService, atLeast(2)).isDetailingSuccessful(idDTO);
     }
 }

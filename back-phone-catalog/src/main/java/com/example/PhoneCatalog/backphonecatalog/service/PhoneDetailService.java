@@ -11,8 +11,7 @@ public class PhoneDetailService {
     public List<PhoneDTO> isDetailingSuccessful (IdDTO idDTO) {
         PhoneListCreator phoneListCreator = new PhoneListCreator();
         List<PhoneDTO> phoneDTOList = phoneListCreator.createListWithPhones();
-        if (idDTO.getId() < 0 || idDTO.getId() > phoneDTOList.size())
-            return null;
+        if (idDTO.getId() < 0 || idDTO.getId() > phoneDTOList.size()) return null;
         return List.of(phoneDTOList.get(idDTO.getId()));
     }
 }
