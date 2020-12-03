@@ -15,7 +15,7 @@ This project consists of two main parts: the API server side, developed in Java 
 First, after cloning this repository in your local PC, enter the back project directory:
 ### `cd REACT-PhoneCatalog/back-phone-catalog/`
 
-Now, having `gradle.build` available in this directory.
+Now, we have `gradle.build` available in this directory.
 For this we first need to [install Gradle](https://gradle.org/install/)
 <br />We can now run the application:
 ### `gradle bootRun`
